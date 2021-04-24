@@ -6,7 +6,7 @@
 
 package co.edu.unicauca.facade.domain;
 
-import co.edu.unicauca.facade.doma.State;
+import co.edu.unicauca.facade.domain.order.State;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,65 +17,122 @@ import java.util.List;
  */
 public class Order {
     
+    /**
+     *
+     */
     public int despatch;
     private Customer customer;
     private LocalDate date;
     private State state;
     private List<Item> details;
 
+    /**
+     *
+     * @param customer
+     */
     public Order(Customer customer) {
         this.customer = customer;
         details = new ArrayList();
     }
 
+    /**
+     *
+     * @return
+     */
     public int getDespatch() {
         return despatch;
     }
 
+    /**
+     *
+     * @param despatch
+     */
     public void setDespatch(int despatch) {
         this.despatch = despatch;
     }
 
+    /**
+     *
+     * @return
+     */
     public Customer getCustomer() {
         return customer;
     }
 
+    /**
+     *
+     * @param customer
+     */
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
+    /**
+     *
+     * @return
+     */
     public LocalDate getDate() {
         return date;
     }
 
+    /**
+     *
+     * @param date
+     */
     public void setDate(LocalDate date) {
         this.date = date;
     }
 
+    /**
+     *
+     * @return
+     */
     public State getState() {
         return state;
     }
 
+    /**
+     *
+     * @param state
+     */
     public void setState(State state) {
         this.state = state;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Item> getDetails() {
         return details;
     }
 
+    /**
+     *
+     * @param details
+     */
     public void setDetails(List<Item> details) {
         this.details = details;
     }
     
+    /**
+     *
+     * @param dish
+     * @param amount
+     */
     public void addDish(Dish dish, int amount){
         this.details.add(new Item(dish, amount));
     }
     
+    /**
+     *
+     * @return
+     */
     public int calculateTotal(){
         int result = 0;
         for(Item temp:details){
-            result = temp.getDish().getPrice() + result;
+            for(int i = 0;i < temp.getAmount();i++)
+                result = temp.getDish().getPrice() + result;
         }
         return result;
     }

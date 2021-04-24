@@ -3,16 +3,37 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.unicauca.facade.access;
-
-import co.edu.unicauca.facade.domain.Order;
+package co.edu.unicauca.facade.domain.order;
 
 /**
  *
  * @author Jesus Edwin Adrada Ruiz cod: 104617020514
  */
-public interface IOrderRepository {
+public enum State {
     
-    void save(Order order);
+    /**
+     *
+     */
+    NEW,
+
+    /**
+     *
+     */
+    CONFIRMED,
+
+    /**
+     *
+     */
+    DISPACHED,
+
+    /**
+     *
+     */
+    FINALIZED,
+
+    /**
+     *
+     */
+    CANCELLED;
     
 }

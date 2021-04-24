@@ -5,7 +5,9 @@
  */
 package co.edu.unicauca.facade.presentacion;
 
-import co.edu.unicauca.facade.doma.State;
+import co.edu.unicauca.facade.access.Factory;
+import co.edu.unicauca.facade.access.IOrderRepository;
+import co.edu.unicauca.facade.domain.order.State;
 import co.edu.unicauca.facade.domain.Customer;
 import co.edu.unicauca.facade.domain.Dish;
 import co.edu.unicauca.facade.domain.OrderFacade;
@@ -34,8 +36,8 @@ public class Main {
         System.out.println("Se cambio el estado a " + facade.getOrder().getState());
         System.out.println("El valor total del pedido es: " + facade.calculateTotal());
         System.out.println("Total de platos pedidos: " + facade.totalDishes());
-        //IOrderRepository repo = Factory.getInstance().getRepository("default");
-        //facade.save(repo);
+        IOrderRepository repo = Factory.getInstance().getRepository("default");
+        facade.save(repo);
         System.out.println("Pedido grabado con éxito en la base de datos");
     }
     
