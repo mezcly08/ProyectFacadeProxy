@@ -26,6 +26,11 @@ public class OrderRepositoryImplArrays implements IOrderRepository{
     public void save(Order order) {
         listOrders.add(order);
     }
+
+    @Override
+    public void createOrder(Order order) {
+        
+    }
     
     
 

@@ -7,6 +7,9 @@
 package co.edu.unicauca.facade.domain;
 
 import co.edu.unicauca.facade.access.IOrderRepository;
+import co.edu.unicauca.facade.domain.Customer;
+import co.edu.unicauca.facade.domain.Dish;
+import co.edu.unicauca.facade.domain.Order;
 import co.edu.unicauca.facade.domain.order.State;
 
 /**

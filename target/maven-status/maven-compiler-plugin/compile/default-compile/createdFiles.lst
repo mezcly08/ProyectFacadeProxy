@@ -1,10 +1,13 @@
 co\edu\unicauca\facade\access\OrderRepositoryImplArrays.class
-co\edu\unicauca\facade\access\Factory.class
-co\edu\unicauca\facade\access\IOrderRepository.class
 co\edu\unicauca\facade\domain\order\State.class
-co\edu\unicauca\facade\domain\OrderFacade.class
+co\edu\unicauca\facade\domain\OrderServiceLogger.class
 co\edu\unicauca\facade\domain\Dish.class
 co\edu\unicauca\facade\domain\Item.class
-co\edu\unicauca\facade\domain\Order.class
 co\edu\unicauca\facade\presentacion\Main.class
 co\edu\unicauca\facade\domain\Customer.class
+co\edu\unicauca\facade\access\Factory.class
+co\edu\unicauca\facade\access\IOrderRepository.class
+co\edu\unicauca\facade\domain\IOrderService.class
+co\edu\unicauca\facade\domain\OrderFacade.class
+co\edu\unicauca\facade\domain\Order.class
+co\edu\unicauca\facade\domain\ProxyClient.class
